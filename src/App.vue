@@ -26,10 +26,12 @@ import HelloWorld from "./components/HelloWorld";
 import MyFirst from "@/components/MyFirst.vue";
 export default {
   name: "App",
+  /*
   components: {
     "my-component": MyFirst,
     HelloWorld
   },
+  */
   data() {
     return {
       //
