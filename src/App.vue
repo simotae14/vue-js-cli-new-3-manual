@@ -2,8 +2,8 @@
   <v-app>
     <v-toolbar app>
       <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
+        <router-link to="/" class="font-weight-light">Home</router-link>&nbsp;
+        <router-link to="/about" class="font-weight-light">About</router-link>
       </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-btn flat href="https://github.com/vuetifyjs/vuetify/releases/latest" target="_blank">
@@ -12,17 +12,22 @@
     </v-toolbar>
 
     <v-content>
-      <HelloWorld/>
+      <my-component></my-component>
+      <my-component></my-component>
+      <my-component></my-component>
+      <my-component></my-component>
+      <router-view></router-view>
     </v-content>
   </v-app>
 </template>
 
 <script>
 import HelloWorld from "./components/HelloWorld";
-
+import MyFirst from "@/components/MyFirst.vue";
 export default {
   name: "App",
   components: {
+    "my-component": MyFirst,
     HelloWorld
   },
   data() {
